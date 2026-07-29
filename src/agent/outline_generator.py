@@ -155,19 +155,14 @@ class TaigiOutlineGenerator:
                     syllabus_ref=syllabus_ref,
                     official_ref=official_ref
                 )
-            # 驗證生成的拼音品質，不合格則降級
+            # 驗證生成的拼音品質，不合格則拋出錯誤
             if self._validate_outline(result):
                 result["official_materials"] = official_matches
                 return result
             else:
-                result = self._generate_via_mock(prompt, grade, duration_minutes)
-                result["official_materials"] = official_matches
-                return result
-        except (ConnectionError, requests.exceptions.RequestException) as e:
-            # 智慧降級：Ollama 未啟動或失敗，執行 Mock 模擬生成
-            result = self._generate_via_mock(prompt, grade, duration_minutes)
-            result["official_materials"] = official_matches
-            return result
+                raise ValueError("AI 產生的大綱品質驗證失敗（可能是格式錯誤、選項重複或漏字），請重新生成一次。")
+        except Exception as e:
+            raise RuntimeError(f"AI 生成過程發生錯誤: {str(e)}")
 
     def _generate_via_ollama(
         self, model: str, prompt: str, grade: str, duration: int,
@@ -271,11 +266,10 @@ JSON Schema：
                 return self._parse_json_response(content)
             else:
                 print(f"  [-] Ollama 呼叫失敗: HTTP {res.status_code}")
-                # 失敗時降級為 mock
-                return self._generate_via_mock(prompt, grade, duration)
+                raise ConnectionError(f"Ollama error: HTTP {res.status_code}")
         except Exception as e:
             print(f"  [-] Ollama 呼叫發生異常: {str(e)}")
-            return self._generate_via_mock(prompt, grade, duration)
+            raise e
 
     def _generate_via_groq(
         self, prompt: str, grade: str, duration: int,
