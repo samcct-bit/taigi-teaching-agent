@@ -134,7 +134,9 @@ class TaigiOutlineGenerator:
 
         # 4. 偵測並選擇 LLM 模型並生成
         try:
-            if self.llm_provider == "groq" and self.groq_api_key:
+            if self.llm_provider == "groq":
+                if not self.groq_api_key:
+                    raise ValueError("雲端伺服器未讀取到 Groq 金鑰！請確認 Render 的 Environment Variables 是否正確設定了 GROQ_API_KEY。")
                 result = self._generate_via_groq(
                     prompt=prompt,
                     grade=grade,
