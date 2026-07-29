@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T16:48:44",
+  "generated_at": "2026-07-06T10:24:42",
   "ok": true,
   "checks": [
     {
@@ -14,7 +14,7 @@
         "confirmed_unavailable": 2,
         "pdf_without_text": 0,
         "duplicate_catalog_keys": 0,
-        "download_errors": 2,
+        "download_errors": 0,
         "source_count_mismatches": 0
       }
     },
@@ -40,7 +40,7 @@
       "ok": true,
       "message": "自然語言教材產出資料夾必須通過既有驗證器。",
       "details": {
-        "output_dir": "output\\smoke_full_goal_all_outputs",
+        "output_dir": "D:\\antigravity\\taigi-teaching-agent\\output\\smoke_full_goal_all_outputs",
         "issues": []
       }
     },
@@ -76,7 +76,7 @@
         "forced": true,
         "attempted": true,
         "success": true,
-        "path": "output\\smoke_full_goal_all_outputs\\lesson_video.mp4",
+        "path": "output/smoke_full_goal_all_outputs\\lesson_video.mp4",
         "skipped_reason": null
       }
     },
@@ -104,7 +104,7 @@
       "ok": true,
       "message": "正式上課包必須通過產出資料夾驗證器。",
       "details": {
-        "output_dir": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo",
+        "output_dir": "output\\formal_full_goal_demo",
         "issues": []
       }
     },
@@ -125,7 +125,7 @@
         "forced": true,
         "attempted": true,
         "success": true,
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\lesson_video.mp4",
+        "path": "output/formal_full_goal_demo\\lesson_video.mp4",
         "skipped_reason": null
       }
     },
@@ -147,7 +147,7 @@
     }
   ],
   "official_repository": {
-    "generated_at": "2026-07-04T04:26:02",
+    "generated_at": "2026-07-06T10:09:00",
     "catalog_count": 868,
     "source_count": 3,
     "local_file_count": 50,
@@ -288,7 +288,7 @@
       "confirmed_unavailable": 2,
       "pdf_without_text": 0,
       "duplicate_catalog_keys": 0,
-      "download_errors": 2,
+      "download_errors": 0,
       "source_count_mismatches": 0
     },
     "issues": {
@@ -316,28 +316,13 @@
       ],
       "pdf_without_text": [],
       "duplicate_catalog_keys": [],
-      "download_errors": [
-        {
-          "timestamp": "2026-07-03T22:20:04",
-          "stage": "attachment_download",
-          "resource_id": "TSMhiResource-003027",
-          "url": "https://cirn.moe.edu.tw/Upload/NEWS/638362678533318547.pdf",
-          "message": "基礎連接已關閉: 無法為 SSL/TLS 安全通道建立信任關係。"
-        },
-        {
-          "timestamp": "2026-07-03T22:20:43",
-          "stage": "attachment_download",
-          "resource_id": "TSMhiResource-001205",
-          "url": "https://acdm.tcssh.tc.edu.tw/teach/parent_%20language/parent/book/book_2.pdf",
-          "message": "The remote name could not be resolved: 'acdm.tcssh.tc.edu.tw'"
-        }
-      ],
+      "download_errors": [],
       "source_count_mismatches": []
     }
   },
   "generation_validation": {
-    "validated_at": "2026-07-04T16:48:44",
-    "output_dir": "output\\smoke_full_goal_all_outputs",
+    "validated_at": "2026-07-06T10:24:42",
+    "output_dir": "D:\\antigravity\\taigi-teaching-agent\\output\\smoke_full_goal_all_outputs",
     "ok": true,
     "issues": [],
     "details": {
@@ -351,12 +336,12 @@
           "interactive",
           "quiz"
         ],
-        "skip_media": true,
+        "skip_media": false,
         "include_video": true
       },
       "lesson_structure": {
         "path": "output\\smoke_full_goal_all_outputs\\lesson_structure.json",
-        "bytes": 78530,
+        "bytes": 77136,
         "title": "情境會話：有機菜蔬",
         "vocabulary_count": 4,
         "dialogue_count": 3,
@@ -365,41 +350,41 @@
       },
       "student_worksheet": {
         "path": "output\\smoke_full_goal_all_outputs\\student_worksheet.docx",
-        "bytes": 37926,
+        "bytes": 144000,
         "paragraph_count": 57,
         "first_text": "臺語學習講義：情境會話：有機菜蔬"
       },
       "teacher_guide": {
         "path": "output\\smoke_full_goal_all_outputs\\teacher_guide.docx",
-        "bytes": 36013,
+        "bytes": 37303,
         "paragraph_count": 18,
         "first_text": "臺語學習講義 (教師解答指導版)：情境會話：有機菜蔬"
       },
       "exam_paper": {
         "path": "output\\smoke_full_goal_all_outputs\\exam_paper.docx",
-        "bytes": 36859,
+        "bytes": 38120,
         "paragraph_count": 42,
         "first_text": "臺語單元考卷：情境會話：有機菜蔬"
       },
       "exam_answer_key": {
         "path": "output\\smoke_full_goal_all_outputs\\exam_answer_key.docx",
-        "bytes": 36100,
+        "bytes": 37387,
         "paragraph_count": 21,
         "first_text": "臺語單元考卷解答：情境會話：有機菜蔬"
       },
       "slides": {
         "path": "output\\smoke_full_goal_all_outputs\\teaching_slides.pptx",
-        "bytes": 40264,
+        "bytes": 39973,
         "slide_count": 8
       },
       "interactive_website": {
         "path": "output\\smoke_full_goal_all_outputs\\interactive_website.html",
-        "bytes": 48543,
+        "bytes": 49193,
         "has_official_materials": true
       },
       "teacher_review_report": {
         "path": "output\\smoke_full_goal_all_outputs\\teacher_review_report.md",
-        "bytes": 8423
+        "bytes": 8244
       },
       "topic_alignment": {
         "topic": "有機菜蔬",
@@ -432,12 +417,12 @@
         "forced": true,
         "attempted": true,
         "success": true,
-        "path": "output\\smoke_full_goal_all_outputs\\lesson_video.mp4",
+        "path": "output/smoke_full_goal_all_outputs\\lesson_video.mp4",
         "skipped_reason": null
       },
       "video": {
         "path": "output\\smoke_full_goal_all_outputs\\lesson_video.mp4",
-        "bytes": 2630147
+        "bytes": 4184568
       }
     }
   },
@@ -649,8 +634,8 @@
     ]
   },
   "formal_generation_validation": {
-    "validated_at": "2026-07-04T16:48:44",
-    "output_dir": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo",
+    "validated_at": "2026-07-06T10:24:42",
+    "output_dir": "output\\formal_full_goal_demo",
     "ok": true,
     "issues": [],
     "details": {
@@ -668,8 +653,8 @@
         "include_video": true
       },
       "lesson_structure": {
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\lesson_structure.json",
-        "bytes": 78794,
+        "path": "output\\formal_full_goal_demo\\lesson_structure.json",
+        "bytes": 77136,
         "title": "情境會話：有機菜蔬",
         "vocabulary_count": 4,
         "dialogue_count": 3,
@@ -677,42 +662,42 @@
         "has_official_recommendations": true
       },
       "student_worksheet": {
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\student_worksheet.docx",
-        "bytes": 143030,
+        "path": "output\\formal_full_goal_demo\\student_worksheet.docx",
+        "bytes": 144000,
         "paragraph_count": 57,
         "first_text": "臺語學習講義：情境會話：有機菜蔬"
       },
       "teacher_guide": {
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\teacher_guide.docx",
-        "bytes": 36013,
+        "path": "output\\formal_full_goal_demo\\teacher_guide.docx",
+        "bytes": 37303,
         "paragraph_count": 18,
         "first_text": "臺語學習講義 (教師解答指導版)：情境會話：有機菜蔬"
       },
       "exam_paper": {
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\exam_paper.docx",
-        "bytes": 36859,
+        "path": "output\\formal_full_goal_demo\\exam_paper.docx",
+        "bytes": 38120,
         "paragraph_count": 42,
         "first_text": "臺語單元考卷：情境會話：有機菜蔬"
       },
       "exam_answer_key": {
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\exam_answer_key.docx",
-        "bytes": 36105,
+        "path": "output\\formal_full_goal_demo\\exam_answer_key.docx",
+        "bytes": 37387,
         "paragraph_count": 21,
         "first_text": "臺語單元考卷解答：情境會話：有機菜蔬"
       },
       "slides": {
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\teaching_slides.pptx",
-        "bytes": 40269,
+        "path": "output\\formal_full_goal_demo\\teaching_slides.pptx",
+        "bytes": 39973,
         "slide_count": 8
       },
       "interactive_website": {
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\interactive_website.html",
+        "path": "output\\formal_full_goal_demo\\interactive_website.html",
         "bytes": 49193,
         "has_official_materials": true
       },
       "teacher_review_report": {
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\teacher_review_report.md",
-        "bytes": 8424
+        "path": "output\\formal_full_goal_demo\\teacher_review_report.md",
+        "bytes": 8244
       },
       "topic_alignment": {
         "topic": "有機菜蔬",
@@ -731,13 +716,13 @@
         "is_aligned": true
       },
       "quiz_bank": {
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\quiz_bank.json",
+        "path": "output\\formal_full_goal_demo\\quiz_bank.json",
         "bytes": 4502,
         "question_count": 3,
         "official_extension_count": 3
       },
       "quiz_teacher_key": {
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\quiz_teacher_key.md",
+        "path": "output\\formal_full_goal_demo\\quiz_teacher_key.md",
         "bytes": 1230
       },
       "video_generation": {
@@ -745,12 +730,12 @@
         "forced": true,
         "attempted": true,
         "success": true,
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\lesson_video.mp4",
+        "path": "output/formal_full_goal_demo\\lesson_video.mp4",
         "skipped_reason": null
       },
       "video": {
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\lesson_video.mp4",
-        "bytes": 4371827
+        "path": "output\\formal_full_goal_demo\\lesson_video.mp4",
+        "bytes": 4184568
       }
     },
     "formal_media": {
@@ -762,7 +747,7 @@
         "forced": true,
         "attempted": true,
         "success": true,
-        "path": "C:\\Users\\user\\2026本土語\\output\\formal_full_goal_demo\\lesson_video.mp4",
+        "path": "output/formal_full_goal_demo\\lesson_video.mp4",
         "skipped_reason": null
       }
     }

@@ -93,13 +93,14 @@ def _safe_folder_name(text: str) -> str:
 
 def run_natural_language_request(
     request: str,
+    grade: str = "國中七年級",
     config_path: str = "config.json",
     output_dir: str = None,
     include_video: bool = None,
     skip_media: bool = False,
     validate_output: bool = True,
 ) -> Dict[str, Any]:
-    parsed = parse_natural_language_request(request)
+    parsed = parse_natural_language_request(request, default_grade=grade)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     if output_dir is None:

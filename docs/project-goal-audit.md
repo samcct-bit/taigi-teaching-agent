@@ -1,6 +1,6 @@
 # 專案總目標稽核
 
-產生時間：2026-07-04T16:48:44
+產生時間：2026-07-06T10:24:42
 結果：通過
 
 ## 檢查項目
@@ -30,7 +30,7 @@
 
 ## 自然語言產出摘要
 
-- 輸出資料夾：`output\smoke_full_goal_all_outputs`
+- 輸出資料夾：`D:\antigravity\taigi-teaching-agent\output\smoke_full_goal_all_outputs`
 - 產出類型：exam, slides, video, interactive, quiz
 - 驗證結果：通過
 - 測驗題庫：3 題自動計分，3 題官方延伸
@@ -44,7 +44,7 @@
 
 ## 正式上課包摘要
 
-- 輸出資料夾：`C:\Users\user\2026本土語\output\formal_full_goal_demo`
+- 輸出資料夾：`output\formal_full_goal_demo`
 - 驗證結果：通過
 - 快速模式：False
 - TTS 音檔數：7

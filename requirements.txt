@@ -23,3 +23,7 @@ edge-tts>=7.2.0
 # pip install torch transformers
 # torch>=2.2
 # transformers>=4.40
+
+# 雲端部署 (Render / GitHub API) 擴充套件
+PyGithub>=2.3.0
+python-dotenv>=1.0.1
