@@ -26,7 +26,8 @@ class TaigiOutlineGenerator:
         
         # Read LLM provider configuration
         llm_cfg = self.config.get("llm", {})
-        self.llm_provider = llm_cfg.get("provider", "ollama")
+        # 支援從環境變數直接指定 LLM_PROVIDER，若無則讀取 config，最後預設為 groq
+        self.llm_provider = os.getenv("LLM_PROVIDER", self.config.get("llm", {}).get("provider", "groq"))
         
         # Ollama configuration
         ollama_cfg = self.config.get("ollama", {})
