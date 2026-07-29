@@ -156,13 +156,20 @@ async def generate_lesson(
                     with open(file_path, "rb") as f:
                         content = f.read()
                     
-                    if file_path.endswith((".wav", ".mp3", ".ogg", ".mp4", ".png", ".jpg")):
+                    if file_path.endswith((".wav", ".mp3", ".ogg", ".mp4", ".png", ".jpg", ".docx", ".pptx", ".xlsx", ".pdf", ".zip")):
                         # 二進位檔案：需透過 base64 上傳到 Blob
                         encoded = base64.b64encode(content).decode("utf-8")
                         blob = repo.create_git_blob(encoded, "base64")
                         tree_elements.append(InputGitTreeElement(path=rel_path, mode="100644", type="blob", sha=blob.sha))
                     else:
-                        blob = repo.create_git_blob(content.decode("utf-8"), "utf-8")
+                        try:
+                            # 嘗試以純文字解碼
+                            text_content = content.decode("utf-8")
+                            blob = repo.create_git_blob(text_content, "utf-8")
+                        except UnicodeDecodeError:
+                            # 若非純文字（未預期到的二進位檔），自動 fallback 為 base64
+                            encoded = base64.b64encode(content).decode("utf-8")
+                            blob = repo.create_git_blob(encoded, "base64")
                         tree_elements.append(InputGitTreeElement(path=rel_path, mode="100644", type="blob", sha=blob.sha))
             
             new_tree = repo.create_git_tree(tree_elements, base_tree)
